@@ -129,22 +129,28 @@ internQs = () => {
 
 let cards = [];
 function engCard(engineer) {
-  cards.push(`<div class="card">
-    <h2>${engineer.name}</h2>
-    <h2>${engineer.getRole}</h2>
-    <h4>${engineer.id}</h4>
-    <h4>${engineer.email}</h4>
-    <h4>${engineer.github}</h4>
+  cards.push(`
+  <div class="card col">
+    <div class="card-body">
+      <h2>${engineer.name}</h2>
+      <h2>${engineer.getRole()}</h2>
+      <h4>ID number: ${engineer.id}</h4>
+      <h4>Email: ${engineer.email}</h4>
+      <h4>Github: ${engineer.github}</h4>
+    </div>
   </div>`)
 }
 
 function intCard(intern) {
-  cards.push(`<div class="card">
-    <h2>${intern.name}</h2>
-    <h2>${intern.getRole}</h2>
-    <h4>${intern.id}</h4>
-    <h4>${intern.email}</h4>
-    <h4>${intern.school}</h4>
+  cards.push(`
+  <div class="card col">
+    <div class="card-body">
+      <h2>${intern.name}</h2>
+      <h2>${intern.getRole()}</h2>
+      <h4>ID number: ${intern.id}</h4>
+      <h4>Email: ${intern.email}</h4>
+      <h4>School: ${intern.school}</h4>
+    </div>
   </div>`)
 }
 
@@ -159,19 +165,24 @@ const generateHTML = (data) => {
       <link rel="stylesheet" href="./style.css">
     </head>
     <body>
-    <header><h1>${employeeList.manager.getName()}'s' Team</h1></header>
+      <header><h1>${employeeList.manager.getName()}'s' Team</h1></header>
 
-    <main>
-      <div class="card" id="manager-card">
-      <h2>${employeeList.manager.name}</h2>
-      <h4>${employeeList.manager.getRole()}</h4>
-      <h4>${employeeList.manager.id}</h4>
-      <h4>${employeeList.manager.email}</h4>
-      <h4>${employeeList.manager.officeNumber}</h4>
-      </div>
-      ${cards}
-    </main>
-    <div class="card"></div>
+      <main>
+        <div class="container"> 
+          <div class="row">  
+            <div class="card" id="manager-card">
+              <h2>${employeeList.manager.name}</h2>
+              <h4>${employeeList.manager.getRole()}</h4>
+              <h4>ID number: ${employeeList.manager.id}</h4>
+              <h4>Email: ${employeeList.manager.email}</h4>
+              <h4>Office number: ${employeeList.manager.officeNumber}</h4>
+            </div>
+
+            ${cards}
+          </div>
+
+        </div>
+      </main>
     </body>
     </html>`
   
