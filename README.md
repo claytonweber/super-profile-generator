@@ -42,5 +42,4 @@ https://user-images.githubusercontent.com/39349564/173451919-afceb748-01d7-4739-
   ## Tests
   You can use npm test to run tests using jest
 
-  ## Questions
   
