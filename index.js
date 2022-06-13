@@ -165,12 +165,12 @@ const generateHTML = (data) => {
       <link rel="stylesheet" href="./style.css">
     </head>
     <body>
-      <header><h1>${employeeList.manager.getName()}'s' Team</h1></header>
+      <header><h1>${employeeList.manager.getName()}'s Team</h1></header>
 
       <main>
         <div class="container"> 
           <div class="row">  
-            <div class="card" id="manager-card">
+            <div class="card col">
               <h2>${employeeList.manager.name}</h2>
               <h4>${employeeList.manager.getRole()}</h4>
               <h4>ID number: ${employeeList.manager.id}</h4>
